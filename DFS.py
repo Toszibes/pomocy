@@ -1,27 +1,27 @@
+
 price = float(input('podaj cene: '))
 cash = float(input('ile masz kasy: '))
 zlotowki = [5, 2, 1]
-grosze = [50, 20, 10, 5, 2, 1]
-reszta = cash - price
-a = int(reszta)
-b = reszta - a
-    
+grosze = [0.50, 0.20, 0.10, 0.05, 0.02, 0.01]
+a = int(cash - price)
+b = (cash - price) - a
+b = round(b, 2)
+odp = []
+
 if price - cash <= 0:
     ą = 0
     while a >= 1:
         if zlotowki[ą] <= a:
-            print(zlotowki[ą])
+            odp.append(zlotowki[ą])
             a = a - zlotowki[ą]
         else:
             ą += 1
     ę = 0
     while b > 0:
         if grosze[ę] <= b:
-            print(grosze[ę])
-            b = b - zlotowki[ę]
+            odp.append(grosze[ę])
+            b = round(b - grosze[ę], 2)
         else:
             ę += 1
-else:
-    print('biedak')
-  
-#print(a, b)
+for o in odp:
+    print(o)
