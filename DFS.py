@@ -1,4 +1,3 @@
-
 price = float(input('podaj cene: '))
 cash = float(input('ile masz kasy: '))
 zlotowki = [5, 2, 1]
