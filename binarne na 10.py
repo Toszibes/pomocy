@@ -22,6 +22,7 @@ if c == 'Binarne' or c == 'binarne':
         elif y < 1:
             wynik.append(0)
         else:
+            wynik.append(1)
             break
 
     cos = ''.join(map(str, wynik))
